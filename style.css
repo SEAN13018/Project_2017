@@ -14,14 +14,16 @@ body {
 
 #icon {
 	float: left;
+	overflow: hidden; 
 }	
 
 #name {
-	padding-top: 1.45em;
-	padding-left: 9.11em;
+	padding-top: 0.25em;
 	color: White;
+	text-align: center;
 	overflow: hidden;
-}	
+	font-size: 1.5em;
+}
 
 .wrapper {
   	padding-top: 0.5em;
