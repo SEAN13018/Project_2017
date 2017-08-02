@@ -44,6 +44,11 @@ body {
 	font-size: 100%;
 }
 
+#shield{
+	width: 100%;
+	height:auto;
+}
+
 .a {
 	grid-column: 1;
 	grid-row: 1/3;
