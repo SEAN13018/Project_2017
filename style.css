@@ -2,7 +2,6 @@ body {
 	margin: auto;
 	width:75%;
 	background-color: #e6e6e6;
-	padding: 1px, 1px, 1px, 1px;  
 }
 
 .top {
@@ -26,8 +25,7 @@ body {
 }
 
 .wrapper {
-  	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+  	padding-top: 0.8em;
   	display: grid;
   	grid-gap: 1em;
 		grid-template-columns: 3;
@@ -39,7 +37,7 @@ body {
 }
 
 .box {
-	background-color: #444;
+	background-color: #e6e6e6;
 	color: Black;
 	border-radius: 5px;
 	padding: 20px;
