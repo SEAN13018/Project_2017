@@ -23,7 +23,7 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1366"
+     inkscape:window-width="1024"
      inkscape:window-height="705"
      id="namedview23"
      showgrid="false"
@@ -61,20 +61,20 @@
          d="m 17.731143,527.62485 c 0,120.50885 117.388777,319.21505 257.138537,466.91644 79.36578,83.88181 165.94355,151.31321 242.3274,178.62871 195.15377,-69.7906 527.30682,-448.51274 531.83182,-645.54515 4.5251,-197.04221 0,-248.5062 0,-456.715688 C 885.55598,77.384358 924.42999,206.90277 559.30143,77.384117 453.96279,40.018303 381.8234,226.3305 19.726196,70.908171 19.720396,544.9361 17.73548,338.66658 17.73548,527.62387 Z"
          inkscape:connector-curvature="0" />
       <text
-         transform="scale(0.94683269,1.0561528)"
+         transform="scale(0.93720555,1.0670018)"
          id="text87"
-         y="241.63438"
-         x="96.689789"
-         style="font-style:normal;font-weight:normal;font-size:38.71513748px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9678784"
+         y="228.0542"
+         x="59.636379"
+         style="font-style:normal;font-weight:normal;font-size:33.4413414px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.83603346"
          xml:space="preserve"><tspan
-           style="stroke-width:0.9678784"
+           style="font-size:100.32401276px;stroke-width:0.83603346"
            id="tspan85"
-           y="241.63438"
-           x="96.689789"><tspan
+           y="228.0542"
+           x="59.636379"><tspan
              id="tspan83"
-             style="font-size:92.91632843px;stroke-width:0.9678784"
-             y="241.63438"
-             x="96.689789">Need Help Logging In?</tspan></tspan></text>
+             style="font-size:100.32401276px;stroke-width:0.83603346"
+             y="228.0542"
+             x="59.636379">Need Help Logging In?</tspan></tspan></text>
       <a
          href="desktop/help.html"
          target="_blank"

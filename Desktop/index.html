@@ -7,15 +7,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Project Privacy</title>
 		<link rel="stylesheet" href="../style_main.css">
-		<script src="script.js"></script>
+		<script type="text/javascript">
+			var w = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+			
+			if (w <= 1000) {
+				window.location.assign("../mobile/m_index.html")
+			}
+		</script>
 	</head>
-	<!-- if ($(window).width() < 960) {
-	alert('Less than 960');
-		}
-	else {
-	alert('More than 960');
-	} -->
-	
 	<!-- Add a thing that checks the screen size and changes the CSS file. For mobile or devices with a width below 1024px -->
 	<!-- Move styling elements from here to the css document. -->
 	<body>
