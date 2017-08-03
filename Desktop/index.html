@@ -6,18 +6,24 @@
 		<meta charset = "utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Project Privacy</title>
-		<link rel="stylesheet" href="../style_main.css">
+		<link id="pagestyle" rel="stylesheet" href="../style_main.css">
 		<script type="text/javascript">
+			function swapStyleSheet(sheet){
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+			
 			var w = window.innerWidth
 			|| document.documentElement.clientWidth
 			|| document.body.clientWidth;
 			
-			if (w <= 1000) {
-				window.location.assign("../mobile/m_index.html")
+			if (w <= 683) {
+				swapStyleSheet('../style_mobile.css')
 			}
 		</script>
 	</head>
-	<!-- Add a thing that checks the screen size and changes the CSS file. For mobile or devices with a width below 1024px -->
+	<!-- Add a thing that checks the screen size and changes the CSS file. For mobile or devices with a width below 683x -->
+	<!-- Added.-->
+	
 	<!-- Move styling elements from here to the css document. -->
 	<body>
 		<div class="top">
