@@ -1,6 +1,18 @@
+/* This is the main stylesheet for the website */
+
+/* Font for the header */
+
+/* font not working right now */ 
+
+@font-face {
+	font-family: 'quicksand-bold';
+	src: url('Quicksand-Bold.otf');
+}
+
+/* Styling for the website*/
 body {
 	margin: auto;
-	width:75%;
+	width:90%;
 	background-color: #e6e6e6;
 }
 
@@ -14,14 +26,29 @@ body {
 #icon {
 	float: left;
 	overflow: hidden; 
-}	
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+}
+
+#icon :hover {
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
+}
 
 #name {
 	padding-top: 0.25em;
 	color: White;
 	text-align: center;
 	overflow: hidden;
+	font-family:'quicksand-bold';
 	font-size: 1.5em;
+}
+
+#name :hover {
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
 }
 
 .wrapper {
