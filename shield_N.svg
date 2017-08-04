@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -83,6 +83,55 @@
            y="-43.929485"
            id="tspan79"
            style="stroke-width:0.9678784">News</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:38.71513748px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.9678784"
+         x="71.333176"
+         y="50.840893"
+         id="text48"
+         transform="scale(0.94683269,1.0561528)"><tspan
+           sodipodi:role="line"
+           x="71.333176"
+           y="50.840893"
+           id="tspan34"
+           style="stroke-width:0.9678784"><tspan
+             x="71.333176"
+             y="50.840893"
+             style="font-size:61.94421768px;stroke-width:0.9678784"
+             id="tspan30">Major Changes</tspan><tspan
+             dx="0"
+             x="534.82587"
+             y="50.840893"
+             style="font-size:61.94421768px;stroke-width:0.9678784"
+             id="tspan32" /></tspan><tspan
+           sodipodi:role="line"
+           x="71.333176"
+           y="128.27116"
+           id="tspan40"
+           style="stroke-width:0.9678784"><tspan
+             x="71.333176"
+             y="128.27116"
+             style="font-size:61.94421768px;stroke-width:0.9678784"
+             id="tspan36">- August 1st 2017</tspan><tspan
+             dx="0"
+             x="634.63837"
+             y="128.27116"
+             style="font-size:61.94421768px;stroke-width:0.9678784"
+             id="tspan38" /></tspan><tspan
+           sodipodi:role="line"
+           x="71.333176"
+           y="205.70143"
+           id="tspan46"
+           style="stroke-width:0.9678784"><tspan
+             x="71.333176"
+             y="205.70143"
+             style="font-size:61.94421768px;stroke-width:0.9678784"
+             id="tspan42">Content: Version 0</tspan><tspan
+             dx="0"
+             x="366.41504"
+             y="205.70143"
+             style="font-size:61.94421768px;stroke-width:0.9678784"
+             id="tspan44" /></tspan></text>
     </g>
   </g>
 </svg>
