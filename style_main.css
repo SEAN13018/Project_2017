@@ -2,14 +2,15 @@
 
 /* Font for the header */
 
-/* font not working right now */ 
+/* font not working on firefoxs */ 
 
 @font-face {
 	font-family: 'quicksand-bold';
 	src: url('Quicksand-Bold.otf');
 }
 
-/* Styling for the website*/
+/* Styling for the main website layout*/
+/* Applicable to all pages*/
 body {
 	margin: auto;
 	width:90%;
@@ -51,6 +52,18 @@ body {
 	transform: scale(1.03);
 }
 
+footer {
+	overflow: hidden;
+	width: 100%;
+	height:3em;
+	color: White;
+	background-color: Black;
+	text-align: center;
+	font-size: 1em;
+}
+
+
+/* Styling for index.html */
 .wrapper {
   	padding-top: 0.8em;
   	display: grid;
@@ -100,12 +113,8 @@ img, .b {
 	grid-row: 1/3;
 }
 
-footer {
-	overflow: hidden;
-	width: 100%;
-	height:3em;
-	color: White;
-	background-color: Black;
-	text-align: center;
-	font-size: 1em;
+/* Styling for navigation */
+
+.box w, .box x, .box y, .box z {
+	display: block;
 }
