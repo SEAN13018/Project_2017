@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Need to add an icon. Like the lock icon used for the navigation. -->
+		<link rel="icon" href="../static/img/lock.ico" type="image/x-icon">
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Project Privacy</title>
+		<!-- Chooses a stylesheet for the website, based on device specifications -->
+		<link id="pagestyle" rel="stylesheet" href="{{ url_for('static', filename='css/style_main.css') }}">
+		<script type="text/javascript">
+			function swapStyleSheet(sheet){
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+			}
+			
+			var w = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+			
+			if (w <= 820) {
+				swapStyleSheet('../static/css/style_mobile.css')
+			}
+			function goBack() {
+				window.history.back();
+			}
+		</script>
+	</head>
+	<!-- Added a thing that checks the screen size and changes the CSS file. For mobile or devices with a width below 820px -->
+
+	<body>
+		<div class="top">
+			<div id="icon">
+				<a href="{{ url_for('navigation') }}"><img src="../static/img/lock_final.svg" alt="Navigation" style="width:8em;height:8em;"></a>
+			</div>
+			<div id="name">
+				<h1>Company Name</h1>
+			</div>
+		</div>
+		{% block content %}
+		{% endblock %}
+		<footer>
+			<p> Sean Nichols &copy; 2017 </p>
+		</footer>
+	</body>
+
+</html>
