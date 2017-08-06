@@ -7,6 +7,12 @@ app = Flask(__name__)
 def index():
 	return render_template("/index.html")
 
+	
+@app.route("/login")
+def login():
+	return render_template("/login.html")
+
+
 @app.route("/navigation")
 def navigation():
 	# When x is equal to True it means the user is logged in. 
@@ -17,12 +23,9 @@ def navigation():
 		return render_template("/navigation.html", x = True)
 	elif x == False:
 		return render_template("/navigation.html", x = False)
-	
-@app.route("/login")
-def login():
-	return render_template("/login.html")
-	
-# Basic form for the help page.	
+
+		
+# A simple form is on the help page.	
 @app.route("/help", methods = ['GET', 'POST'])
 def help():
 	if request.method == 'POST':
