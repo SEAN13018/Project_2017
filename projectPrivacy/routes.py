@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import sqlite3 as sql
 
 app = Flask(__name__)
 
@@ -21,21 +22,24 @@ def navigation():
 def login():
 	return render_template("/login.html")
 	
-# For when the forms are working
-# @app.route("/help", methods=['GET', 'POST'])
-
-# For now
-@app.route("/help")
+# Basic form for the help page.	
+@app.route("/help", methods = ['GET', 'POST'])
 def help():
-	return render_template("/help.html")
-	
-# Stuff for forms: Not working	
-	# form = HelpForm()
-	
-	#if request.method == 'POST':
-	#	return "Success!"
-	#elif request.method == 'GET':
-	#	return render_template("/help.html", form = form)
+	if request.method == 'POST':
+		firstname = request.form['firstname']
+		lastname = request.form['lastname']
+		email = request.form['email']
+		query = request.form['query']
+			
+		con = sql.connect("database.db")
+		cur = con.cursor()
+		cur.execute("INSERT INTO help (firstname, lastname, email, query) VALUES (?,?,?,?)", (firstname, lastname, email, query))
+		con.commit()
+		con.close()
+		return render_template("result.html")
+
+	elif request.method == 'GET':
+		return render_template("/help.html")
 	
 if __name__ == "__main__":
 	app.run(debug=True)

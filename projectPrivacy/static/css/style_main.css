@@ -138,6 +138,7 @@ a, .close{
 		grid-template-columns: 2;
 		grid-template-rows: 2;
 	background-color: #E6E6E6;
+	text-align: center;
 }
 
 .inactive {
@@ -170,18 +171,28 @@ a, .close{
 	background-color: #FFFFFF;
 }
 
-.active, p {
-	text-align: center;
-}
-
-#login_here{
-	padding-top: 35%;
-}
-
 #fill {
 	width: 100%;
 }
 
 figcaption {
 	text-align: center;
+}
+
+/* Styling for the help page */
+h2{
+	padding-top: 0.1em;
+	text-align: center;
+}
+
+.section-content {
+	margin: 0 auto;
+	width: 40%;
+	background-color: #FBAE17;
+	padding-bottom: 0.5em;
+}
+
+form{
+	font-family:'quicksand-bold';
+	padding-bottom: 0.5em;
 }

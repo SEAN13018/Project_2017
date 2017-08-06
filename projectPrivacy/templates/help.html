@@ -1,13 +1,21 @@
 {% extends "layout.html" %}
 
 {% block content %}
-		<main class="container help-section">
 			<div class="section-content">
-				<h2>Need Help?</h2>
-				
-				<form method="POST" action="#">
-					<!-- Form questions here for user to input answers. -->
+				<form action = "{{ url_for('help') }}" method = "POST">
+					<h2>Request Help Here</h2>
+					First Name: <input type = "text" name = "firstname"></br>
+         
+					Last Name: <input type = "text" name = "lastname"><br>
+         
+					Email: <input type = "text" name = "email"><br>
+
+					Query:
+					<textarea type = "text" name = "query" rows = 5 cols = 30></textarea>
+					<br>
+					<br>
+					<input type = "submit" value = "Submit" /><br>
 				</form>
 			</div>
-		</main>
+			<br>
 {% endblock %}
