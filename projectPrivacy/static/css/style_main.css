@@ -15,7 +15,7 @@ body {
     border-width: 1px;
 	border-color: #000000;
 	margin: auto;
-	width:72.5%;
+	width:80%;
 	background-color: #e6e6e6;
 }
 
@@ -133,14 +133,11 @@ a, .close{
 }
 
 .active {
-	width: 100%;
+	grid-gap: 0.4em;
 	display: grid;
-	grid-gap: 10em;
 		grid-template-columns: 2;
 		grid-template-rows: 2;
-	height:100%;
-	position: relative;
-	background-color: #FFFFFF;
+	background-color: #E6E6E6;
 }
 
 .inactive {
@@ -148,23 +145,41 @@ a, .close{
 }
 
 .w{
+	padding-left: 1em;
 	grid-column:1;
 	grid-row: 1;
-	width: 48%;
+	background-color: #FFFFFF;
 }
 
 .x{
+	padding-left: 1em;
 	grid-column:2;
 	grid-row: 1;
+	background-color: #FFFFFF;
 }
 .y{
+	padding-left: 1em;
 	grid-column:1;
 	grid-row: 2;
+	background-color: #FFFFFF;
 }
 
 .z{
 	grid-column:2;
 	grid-row: 2;
+	background-color: #FFFFFF;
+}
+
+.active, p {
+	text-align: center;
+}
+
+#login_here{
+	padding-top: 35%;
+}
+
+#fill {
+	width: 100%;
 }
 
 figcaption {

@@ -8,32 +8,33 @@
 			<div id="display">
 				<div class="{% if x == True %}active{% else %}inactive{%endif %}">
 					<div class="active w">
-						<a href="/"><img src="../static/img/home.svg" alt="Index Page"><figcaption>Home</figcaption></a>
+						<a href="/"><img src="../static/img/home.svg" alt="Index Page" style="width: 20em;"><figcaption>Home</figcaption></a>
 					</div>
 					<div class="active x">
-						<a href="/messaging"><img src="../static/img/messaging.svg" alt="Messaging Page"><figcaption>Messaging</figcaption></a>
+						<a href="/messaging"><img src="../static/img/messaging.svg" alt="Messaging Page" style="width: 20em;"><figcaption>Messaging</figcaption></a>
 					</div>
 					<div class="active y">
-						<a href="/help"><img src="../static/img/info.svg" alt="Help Page"><figcaption>Help</figcaption></a>
+						<a href="/help"><img src="../static/img/info.svg" alt="Help Page" style="width: 20em;"><figcaption>Help</figcaption></a>
 					</div>
 					<div class="active z">
-						<img src="../static/img/logout.svg" alt=" Page">
-						<figcaption>Logout</figcaption>
+						<a href="/"><img src="../static/img/logout.svg" alt=" Page" style="width: 20em;"><figcaption>Logout</figcaption></a>
 						<!-- Turn it into a button that signs out the user. -->
 					</div>
 				</div>
 				<div class="{% if x == False %}active{% else %}inactive{%endif %}">
 					<div class="active w">
-						<a href="/"><img src="../static/img/home.svg" alt="Index Page"><figcaption>Home</figcaption></a>
+						<a href="/"><img src="../static/img/home.svg" alt="Index Page" style="width: 20em;"><figcaption>Home</figcaption></a>
 					</div>
 					<div class="active x">
-						<a href="/login"><img src="../static/img/login.svg" alt="Login Here" style="width: 48%;"><figcaption>Login</figcaption></a>
+						<a href="/login"><img id="login_here" src="../static/img/login.svg" alt="Login Here" style="width: 20em;"><figcaption>Login</figcaption></a>
 					</div>
 					<div class="active y">
-						<a href="/help"><img src="../static/img/info.svg" alt="Help Page"><figcaption>Help</figcaption></a>
+						<a href="/help"><img src="../static/img/info.svg" alt="Help Page" style="width: 20em;"><figcaption>Help</figcaption></a>
 					</div>
 					<div class="active z">
-						<!-- Empty box in the grid (a space filler.) -->
+						<div id="fill">
+							<p>Coming soon...</p>
+						</div>
 					</div>
 				</div>
 			</div>
