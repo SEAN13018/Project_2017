@@ -1,7 +1,14 @@
 {% extends "layout.html" %}
 
 {% block content %}
+		<br>
 		<div class="login-content">
-			<!-- Login form to go here -->
+			<h2>Login Here</h2>
+			<form action="{{ url_for('login') }}" method="POST">
+				<p><input type = "text" name = "username" placeholder="Username"></p>
+				<p><input type = "password" name = "password" placeholder="Password"></p>
+				<p><input type = "submit" value = "Login" id = "login-submit"></p>
+        </form>
 		</div>
+		<br>
 {% endblock %}

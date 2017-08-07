@@ -169,6 +169,7 @@ a, .close{
 	grid-column:2;
 	grid-row: 2;
 	background-color: #FFFFFF;
+	font-family:'quicksand-bold';
 }
 
 #fill {
@@ -183,6 +184,7 @@ figcaption {
 h2{
 	padding-top: 0.1em;
 	text-align: center;
+	font-family:'quicksand-bold';
 }
 
 .section-content {
@@ -195,4 +197,18 @@ h2{
 form{
 	font-family:'quicksand-bold';
 	padding-bottom: 0.5em;
+}
+
+/* Styling for login page */
+.login-content {
+	margin: 0 auto;
+	width: 50%;
+	border: solid;
+	border-color: black;
+	background-color: #FBAE17;
+	border-width: 1px;
+}
+
+#login-submit {
+	
 }

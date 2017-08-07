@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, url_for, render_template, request, redirect, session
 import sqlite3 as sql
 
 app = Flask(__name__)
@@ -7,18 +7,22 @@ app = Flask(__name__)
 def index():
 	return render_template("/index.html")
 
-	
-@app.route("/login")
+@app.route("/login", methods = ['GET', 'POST'])
 def login():
-	return render_template("/login.html")
-
+	if request.method == 'GET':
+		return render_template('/login.html')
+	elif request.method == 'POST':
+		username = request.form['username']
+		passw = request.form['password']
+		
+		#Stuff for login goes here
 
 @app.route("/navigation")
 def navigation():
 	# When x is equal to True it means the user is logged in. 
 	# Havent setup the login pages yet. 
 	# Currently just manually toggling the x value.
-	x = True
+	x = False
 	if x == True:
 		return render_template("/navigation.html", x = True)
 	elif x == False:
