@@ -1,7 +1,33 @@
 from flask import Flask, url_for, render_template, request, redirect, session
+from flask.ext import login as flask_login
 import sqlite3 as sql
+#import email                            a python file. 
 
 app = Flask(__name__)
+
+#need to tidy this up put in a separate python file. 
+#from http://gatherworkshops.github.io/digital-information/courses/web-data-with-sqlite/ (a tutorial)
+
+app.secret_key = 'super secret string'
+
+login_manager = flask_login.LoginManager()
+login_manager.init_app(app)
+
+class User(flask_login.UserMixin):
+	
+	def __init__(self, username, password):
+		self.username = username
+		self.password = password
+		self.authenticated = False
+		
+	def get_id(self):
+		return self.username
+		
+	def is_authenticated(self):
+		return self.authenticated
+		
+	def is_active(self):
+		return true
 
 @app.route("/")
 def index():
