@@ -15,7 +15,7 @@ body {
     border-width: 1px;
 	border-color: #000000;
 	margin: auto;
-	width:72.5%;
+	width:80%;
 	background-color: #e6e6e6;
 }
 
@@ -133,14 +133,12 @@ a, .close{
 }
 
 .active {
-	width: 100%;
+	grid-gap: 0.4em;
 	display: grid;
-	grid-gap: 10em;
 		grid-template-columns: 2;
 		grid-template-rows: 2;
-	height:100%;
-	position: relative;
-	background-color: #FFFFFF;
+	background-color: #E6E6E6;
+	text-align: center;
 }
 
 .inactive {
@@ -148,25 +146,69 @@ a, .close{
 }
 
 .w{
+	padding-left: 1em;
 	grid-column:1;
 	grid-row: 1;
-	width: 48%;
+	background-color: #FFFFFF;
 }
 
 .x{
+	padding-left: 1em;
 	grid-column:2;
 	grid-row: 1;
+	background-color: #FFFFFF;
 }
 .y{
+	padding-left: 1em;
 	grid-column:1;
 	grid-row: 2;
+	background-color: #FFFFFF;
 }
 
 .z{
 	grid-column:2;
 	grid-row: 2;
+	background-color: #FFFFFF;
+	font-family:'quicksand-bold';
+}
+
+#fill {
+	width: 100%;
 }
 
 figcaption {
 	text-align: center;
+}
+
+/* Styling for the help page */
+h2{
+	padding-top: 0.1em;
+	text-align: center;
+	font-family:'quicksand-bold';
+}
+
+.section-content {
+	margin: 0 auto;
+	width: 40%;
+	background-color: #FBAE17;
+	padding-bottom: 0.5em;
+}
+
+form{
+	font-family:'quicksand-bold';
+	padding-bottom: 0.5em;
+}
+
+/* Styling for login page */
+.login-content {
+	margin: 0 auto;
+	width: 50%;
+	border: solid;
+	border-color: black;
+	background-color: #FBAE17;
+	border-width: 1px;
+}
+
+#login-submit {
+	
 }
