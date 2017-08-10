@@ -1,11 +1,14 @@
 from public import website
-import flask_login
+from public import datamanager
+from flask.ext import login as flask_login
 from flask_login import login_required
 
 website.secret_key = 'super secret string'
 
 login_manager = flask_login.LoginManager()
 login_manager.init_app(website)
+
+login_manager.login_view = "login" 
 
 class User(flask_login.UserMixin):
 	
@@ -25,10 +28,8 @@ class User(flask_login.UserMixin):
 		
 	def is_anonymous(self):
 		return False
-		
-login_manager.login_view = "login" 
 
-def sign_in_user(username, password): # is this in the right place?
+def sign_in_user(username, password):
 	
 	user = load_user(username)
 		
@@ -41,4 +42,21 @@ def sign_in_user(username, password): # is this in the right place?
 
 @login_manager.user_loader
 def load_user(username):
-	return None
+	query_string = (
+		'SELECT uid, username, password FROM users WHERE username =	 ?'
+	)
+	
+	query_result = datamanager.query_db(query_string, [username], one=True)
+	
+	if query_result == None:
+		return None
+		
+	else:
+		user = User(
+			query_result['username'],
+			query_result['password']
+		)
+		
+		user.id = query_result['uid']
+		
+		return user

@@ -2,12 +2,14 @@ from flask import url_for, render_template, request, redirect, session, g
 import sqlite3 as sql
 from public import website
 from public import usermanager
+from public import datamanager
+from flask_login import current_user
 
 #from public import email
 # ^a python file for when I have coded the email file...
 
-# Use a tutorial from http://gatherworkshops.github.io/digital-information/courses/web-data-with-sqlite/user-login.html#/35
-# @ Slide #35
+# Use a tutorial from http://gatherworkshops.github.io/digital-information/courses/web-data-with-sqlite/user-login.html#/42
+# Up to sign out stage of tutorial
 
 @website.route("/")
 def index():
@@ -23,8 +25,7 @@ def login():
 		password = request.form.get('password')
 		
 		user = usermanager.sign_in_user(username, password)
-		
-		if user.is_authenticated():
+		if current_user.is_authenticated:
 			return redirect('/')
 		else:
 			return render_template('/login.html')
