@@ -8,8 +8,8 @@ from flask_login import current_user
 #from public import email
 # ^a python file for when I have coded the email file...
 
-# Use a tutorial from http://gatherworkshops.github.io/digital-information/courses/web-data-with-sqlite/user-login.html#/42
-# Up to sign out stage of tutorial
+# Use a tutorial from https://pythonprogramming.net/password-hashing-flask-tutorial/
+# For encrypting passwords...
 
 @website.route("/")
 def index():
@@ -18,9 +18,12 @@ def index():
 @website.route("/login", methods = ['GET', 'POST'])
 def login():
 	if request.method == 'GET':
-		return render_template('/login.html')
+		if current_user.is_authenticated:
+			return render_template('/index.html')
+		else:
+			return render_template('/login.html')
 	
-	if request.method == 'POST':
+	elif request.method == 'POST':
 		username = request.form.get('username')
 		password = request.form.get('password')
 		
@@ -32,19 +35,15 @@ def login():
 	
 @website.route("/navigation")
 def navigation():
-	# When x is equal to True it means the user is logged in. 
-	# Havent setup the login pages yet. 
-	# Currently just manually toggling the x value.
-	x = False
-	if x == True:
+	# If the user is logged in it will show navigation for messaging and signing out. 
+	if current_user.is_authenticated:
 		return render_template("/navigation.html", x = True)
-	elif x == False:
+	else:
 		return render_template("/navigation.html", x = False)
 
 		
 # A simple form is on the help page.	
 @website.route("/help", methods = ['GET', 'POST'])
-@usermanager.login_required
 def help():
 	if request.method == 'POST':
 		firstname = request.form['firstname']
@@ -61,3 +60,8 @@ def help():
 
 	elif request.method == 'GET':
 		return render_template("/help.html")
+		
+@website.route('/signout')
+def sign_out():
+	usermanager.sign_out_user()
+	return render_template('signout.html')

@@ -60,3 +60,6 @@ def load_user(username):
 		user.id = query_result['uid']
 		
 		return user
+		
+def sign_out_user():
+	flask_login.logout_user()
